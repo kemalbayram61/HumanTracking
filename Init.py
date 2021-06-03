@@ -25,18 +25,16 @@ class Init:
 
         #yol nesnelerinin içeriklerinin doldurulması
         #Ahmet kullanıcısına ait yol nesnesinin doldurulması
-        self.road_1.AddCamera(camera_a)
         self.road_1.AddCamera(camera_b)
         self.road_1.AddCamera(camera_e)
         self.road_1.AddCamera(camera_f)
         #Mehmet kullanıcısına ait yol nesnesinin doldurulması
-        self.road_2.AddCamera(camera_a)
         self.road_2.AddCamera(camera_b)
         self.road_2.AddCamera(camera_c)
         self.road_2.AddCamera(camera_g)
         self.road_2.AddCamera(camera_h)
         #Hasan kullanıcısına ait yol nesnesinin doldurulması
-        self.road_3.AddCamera(camera_a)
         self.road_3.AddCamera(camera_b)
         self.road_3.AddCamera(camera_c)
         self.road_3.AddCamera(camera_d)
+    
