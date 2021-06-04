@@ -15,10 +15,10 @@ class HumanWalk:
             face_found = camera.ReadFace()
             #Uyarı mesajı verilecek olan kısım
             if(face_found):
-                print(str(visitor_name)+" adlı ziyaretçi kamerada görüntülendi.")
+                print(str(visitor_name)+" adlı ziyaretçi " + camera.GetName() + " adlı kamerada görüntülendi.")
                 is_any_face_fount =True
             else:
-                print(str(visitor_name)+" adlı ziyaretçi kamerada görülmedi.!")
+                print(str(visitor_name)+" adlı ziyaretçi " + camera.GetName() + " adlı kamerada görülmedi.!")
                 is_any_face_fount = False
 
         target_road.SetDone(is_any_face_fount)

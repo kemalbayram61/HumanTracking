@@ -30,7 +30,7 @@ class CreateCamera:
             gray = cv.cvtColor(frame, cv.COLOR_BGR2GRAY)
             faces_rects = self.face_classifier.detectMultiScale(gray, scaleFactor = 1.2, minNeighbors = 5)
             #algılanan yüz sayısı
-            print(str(len(faces_rects))+" Adet yüz algılandı.")
+            #print(str(len(faces_rects))+" Adet yüz algılandı.")
 
             #Ziyaretçiye ait verinin alındığı kısım
             if(cv.waitKey(1)==ord('t')):
@@ -75,7 +75,7 @@ class CameraA:
             gray = cv.cvtColor(frame, cv.COLOR_BGR2GRAY)
             faces_rects = self.face_classifier.detectMultiScale(gray, scaleFactor = 1.2, minNeighbors = 5)
             #algılanan yüz sayısı
-            print(str(len(faces_rects))+" Adet yüz algılandı.")
+            #print(str(len(faces_rects))+" Adet yüz algılandı.")
 
             #Ziyaretçiye ait verinin alındığı kısım
             if(cv.waitKey(1)==ord('t')):
@@ -86,13 +86,18 @@ class CameraA:
                     print("Lütfen resim çekerken ekranda tek bir yüz bulunsun.")
 
             #video ekranından çıkma işlemi
-            cv.imshow('frame', gray)
+            #self.show_element.setStyleSheet("background-image : url(image.png); border : 2px solid blue")
+            cv.imshow("frame",gray)
+
             if cv.waitKey(1) == ord('q'):
                 break
         #kameranın kapatıldığı kısım
         cap.release()
         cv.destroyAllWindows()
         return read_face
+
+    def GetName(self):
+        return "Camera A"
 
 class CameraB:
     def __init__(self):
@@ -117,7 +122,7 @@ class CameraB:
             gray = cv.cvtColor(frame, cv.COLOR_BGR2GRAY)
             faces_rects = self.face_classifier.detectMultiScale(gray, scaleFactor = 1.2, minNeighbors = 5)
             #algılanan yüz sayısı
-            print(str(len(faces_rects))+" Adet yüz algılandı.")
+            #print(str(len(faces_rects))+" Adet yüz algılandı.")
             if(len(faces_rects)==1):
                 #Ziyaretçi Görüldü mü?
                 #ziyaretçinin kayıt edilen resminin kodlanması
@@ -144,6 +149,9 @@ class CameraB:
                 cap.release()
                 cv.destroyAllWindows()
                 return False
+    def GetName(self):
+        return "Camera B"
+
 
 class CameraC:
     def __init__(self):
@@ -168,7 +176,7 @@ class CameraC:
             gray = cv.cvtColor(frame, cv.COLOR_BGR2GRAY)
             faces_rects = self.face_classifier.detectMultiScale(gray, scaleFactor = 1.2, minNeighbors = 5)
             #algılanan yüz sayısı
-            print(str(len(faces_rects))+" Adet yüz algılandı.")
+            #print(str(len(faces_rects))+" Adet yüz algılandı.")
             if(len(faces_rects)==1):
                 #Ziyaretçi Görüldü mü?
                 #ziyaretçinin kayıt edilen resminin kodlanması
@@ -195,6 +203,10 @@ class CameraC:
                 cap.release()
                 cv.destroyAllWindows()
                 return False
+
+    def GetName(self):
+        return "Camera C"
+
 class CameraD:
     def __init__(self):
         self.face_classifier = cv.CascadeClassifier('data/haarcascade_frontalface_default.xml')
@@ -218,7 +230,7 @@ class CameraD:
             gray = cv.cvtColor(frame, cv.COLOR_BGR2GRAY)
             faces_rects = self.face_classifier.detectMultiScale(gray, scaleFactor = 1.2, minNeighbors = 5)
             #algılanan yüz sayısı
-            print(str(len(faces_rects))+" Adet yüz algılandı.")
+            #print(str(len(faces_rects))+" Adet yüz algılandı.")
             if(len(faces_rects)==1):
                 #Ziyaretçi Görüldü mü?
                 #ziyaretçinin kayıt edilen resminin kodlanması
@@ -245,6 +257,10 @@ class CameraD:
                 cap.release()
                 cv.destroyAllWindows()
                 return False
+
+    def GetName(self):
+        return "Camera D"
+
 class CameraE:
     def __init__(self):
         self.face_classifier = cv.CascadeClassifier('data/haarcascade_frontalface_default.xml')
@@ -268,7 +284,7 @@ class CameraE:
             gray = cv.cvtColor(frame, cv.COLOR_BGR2GRAY)
             faces_rects = self.face_classifier.detectMultiScale(gray, scaleFactor = 1.2, minNeighbors = 5)
             #algılanan yüz sayısı
-            print(str(len(faces_rects))+" Adet yüz algılandı.")
+            #print(str(len(faces_rects))+" Adet yüz algılandı.")
             if(len(faces_rects)==1):
                 #Ziyaretçi Görüldü mü?
                 #ziyaretçinin kayıt edilen resminin kodlanması
@@ -295,6 +311,10 @@ class CameraE:
                 cap.release()
                 cv.destroyAllWindows()
                 return False
+
+    def GetName(self):
+        return "Camera E"
+
 class CameraF:
     def __init__(self):
         self.face_classifier = cv.CascadeClassifier('data/haarcascade_frontalface_default.xml')
@@ -318,7 +338,7 @@ class CameraF:
             gray = cv.cvtColor(frame, cv.COLOR_BGR2GRAY)
             faces_rects = self.face_classifier.detectMultiScale(gray, scaleFactor = 1.2, minNeighbors = 5)
             #algılanan yüz sayısı
-            print(str(len(faces_rects))+" Adet yüz algılandı.")
+            #print(str(len(faces_rects))+" Adet yüz algılandı.")
             if(len(faces_rects)==1):
                 #Ziyaretçi Görüldü mü?
                 #ziyaretçinin kayıt edilen resminin kodlanması
@@ -345,6 +365,10 @@ class CameraF:
                 cap.release()
                 cv.destroyAllWindows()
                 return False
+
+    def GetName(self):
+        return "Camera F"
+
 class CameraG:
     def __init__(self):
         self.face_classifier = cv.CascadeClassifier('data/haarcascade_frontalface_default.xml')
@@ -368,7 +392,7 @@ class CameraG:
             gray = cv.cvtColor(frame, cv.COLOR_BGR2GRAY)
             faces_rects = self.face_classifier.detectMultiScale(gray, scaleFactor = 1.2, minNeighbors = 5)
             #algılanan yüz sayısı
-            print(str(len(faces_rects))+" Adet yüz algılandı.")
+            #print(str(len(faces_rects))+" Adet yüz algılandı.")
             if(len(faces_rects)==1):
                 #Ziyaretçi Görüldü mü?
                 #ziyaretçinin kayıt edilen resminin kodlanması
@@ -395,6 +419,10 @@ class CameraG:
                 cap.release()
                 cv.destroyAllWindows()
                 return False
+
+    def GetName(self):
+        return "Camera G"
+
 class CameraH:
     def __init__(self):
         self.face_classifier = cv.CascadeClassifier('data/haarcascade_frontalface_default.xml')
@@ -418,7 +446,7 @@ class CameraH:
             gray = cv.cvtColor(frame, cv.COLOR_BGR2GRAY)
             faces_rects = self.face_classifier.detectMultiScale(gray, scaleFactor = 1.2, minNeighbors = 5)
             #algılanan yüz sayısı
-            print(str(len(faces_rects))+" Adet yüz algılandı.")
+            ##print(str(len(faces_rects))+" Adet yüz algılandı.")
             if(len(faces_rects)==1):
                 #Ziyaretçi Görüldü mü?
                 #ziyaretçinin kayıt edilen resminin kodlanması
@@ -445,3 +473,5 @@ class CameraH:
                 cap.release()
                 cv.destroyAllWindows()
                 return False
+    def GetName(self):
+        return "Camera H"

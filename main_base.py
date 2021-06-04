@@ -6,8 +6,7 @@ main_camera = Cameras.CameraA()
 human_walk = HumanWalk.HumanWalk()
 
 #nesne değerlerinin atanması
-init.Load()
-target = init.road_1
+target = init.Road1()
 print(str(len(target.GetCameras()))+" Adet kameradan geçmesi bekleniliyor.")
 
 visitor = Humans.Visitor("Kemal",target)
