@@ -1,0 +1,1 @@
+{"users": [{"_id": "1", "authority": "1", "name": "admin", "password": "1234", "cameras": "A,B,C,D,E,F,G,H"}, {"_id": "2", "authority": "2", "name": "user-1", "password": "1234", "cameras": "A"}, {"_id": "3", "authority": "2", "name": "user-2", "password": "1234", "cameras": "A,B,C,D"}, {"_id": "4", "authority": "2", "name": "user-3", "password": "1234", "cameras": "A,B,C"}]}

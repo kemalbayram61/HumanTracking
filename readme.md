@@ -4,3 +4,4 @@ Gerekli Kütüphaneler:
 -face_recognition
 -dlib
 -imutils
+-pyqt

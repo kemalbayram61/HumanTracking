@@ -100,7 +100,8 @@ class CameraA:
         return "Camera A"
 
 class CameraB:
-    def __init__(self):
+    def __init__(self,camera_label):
+        self.camera_labes = camera_label
         self.face_classifier = cv.CascadeClassifier('data/haarcascade_frontalface_default.xml')
         print("Kamera B Aktifleştiriliyor.!")
         
@@ -139,6 +140,18 @@ class CameraB:
                 results = face_recognition.compare_faces([visitor_encoding], unknown_encoding)
 
                 if(results[0]==True):
+                    img = cv.imread('images/temp.jpg', cv.IMREAD_UNCHANGED)
+                    scale_percent = 30 # percent of original size
+                    width = int(img.shape[1] * scale_percent / 100)
+                    height = int(img.shape[0] * scale_percent / 100)
+                    dim = (width, height)
+                    
+                    # resize image
+                    resized = cv.resize(img, dim, interpolation = cv.INTER_AREA)
+                    cv.imwrite("images/visitor_temp_b.jpg",resized)
+
+                    self.camera_labes.setStyleSheet("background-image : url(images/visitor_temp_b.jpg); border : 2px solid blue")
+                    self.camera_labes.setText("")
                     cap.release()
                     cv.destroyAllWindows()
                     return True
@@ -154,7 +167,8 @@ class CameraB:
 
 
 class CameraC:
-    def __init__(self):
+    def __init__(self,camera_label):
+        self.camera_labes = camera_label
         self.face_classifier = cv.CascadeClassifier('data/haarcascade_frontalface_default.xml')
         print("Kamera C Aktifleştiriliyor.!")
         
@@ -193,6 +207,18 @@ class CameraC:
                 results = face_recognition.compare_faces([visitor_encoding], unknown_encoding)
 
                 if(results[0]==True):
+                    img = cv.imread('images/temp.jpg', cv.IMREAD_UNCHANGED)
+                    scale_percent = 30 # percent of original size
+                    width = int(img.shape[1] * scale_percent / 100)
+                    height = int(img.shape[0] * scale_percent / 100)
+                    dim = (width, height)
+                    
+                    # resize image
+                    resized = cv.resize(img, dim, interpolation = cv.INTER_AREA)
+                    cv.imwrite("images/visitor_temp_c.jpg",resized)
+
+                    self.camera_labes.setStyleSheet("background-image : url(images/visitor_temp_c.jpg); border : 2px solid blue")
+                    self.camera_labes.setText("")
                     cap.release()
                     cv.destroyAllWindows()
                     return True
@@ -208,7 +234,8 @@ class CameraC:
         return "Camera C"
 
 class CameraD:
-    def __init__(self):
+    def __init__(self,camera_label):
+        self.camera_labes = camera_label
         self.face_classifier = cv.CascadeClassifier('data/haarcascade_frontalface_default.xml')
         print("Kamera D Aktifleştiriliyor.!")
         
@@ -247,6 +274,18 @@ class CameraD:
                 results = face_recognition.compare_faces([visitor_encoding], unknown_encoding)
 
                 if(results[0]==True):
+                    img = cv.imread('images/temp.jpg', cv.IMREAD_UNCHANGED)
+                    scale_percent = 30 # percent of original size
+                    width = int(img.shape[1] * scale_percent / 100)
+                    height = int(img.shape[0] * scale_percent / 100)
+                    dim = (width, height)
+                    
+                    # resize image
+                    resized = cv.resize(img, dim, interpolation = cv.INTER_AREA)
+                    cv.imwrite("images/visitor_temp_d.jpg",resized)
+
+                    self.camera_labes.setStyleSheet("background-image : url(images/visitor_temp_d.jpg); border : 2px solid blue")
+                    self.camera_labes.setText("")
                     cap.release()
                     cv.destroyAllWindows()
                     return True
@@ -262,7 +301,8 @@ class CameraD:
         return "Camera D"
 
 class CameraE:
-    def __init__(self):
+    def __init__(self,camera_label):
+        self.camera_labes = camera_label
         self.face_classifier = cv.CascadeClassifier('data/haarcascade_frontalface_default.xml')
         print("Kamera E Aktifleştiriliyor.!")
         
@@ -301,6 +341,18 @@ class CameraE:
                 results = face_recognition.compare_faces([visitor_encoding], unknown_encoding)
 
                 if(results[0]==True):
+                    img = cv.imread('images/temp.jpg', cv.IMREAD_UNCHANGED)
+                    scale_percent = 30 # percent of original size
+                    width = int(img.shape[1] * scale_percent / 100)
+                    height = int(img.shape[0] * scale_percent / 100)
+                    dim = (width, height)
+                    
+                    # resize image
+                    resized = cv.resize(img, dim, interpolation = cv.INTER_AREA)
+                    cv.imwrite("images/visitor_temp_e.jpg",resized)
+
+                    self.camera_labes.setStyleSheet("background-image : url(images/visitor_temp_e.jpg); border : 2px solid blue")
+                    self.camera_labes.setText("")
                     cap.release()
                     cv.destroyAllWindows()
                     return True
@@ -316,7 +368,8 @@ class CameraE:
         return "Camera E"
 
 class CameraF:
-    def __init__(self):
+    def __init__(self,camera_label):
+        self.camera_labes = camera_label
         self.face_classifier = cv.CascadeClassifier('data/haarcascade_frontalface_default.xml')
         print("Kamera F Aktifleştiriliyor.!")
         
@@ -355,6 +408,18 @@ class CameraF:
                 results = face_recognition.compare_faces([visitor_encoding], unknown_encoding)
 
                 if(results[0]==True):
+                    img = cv.imread('images/temp.jpg', cv.IMREAD_UNCHANGED)
+                    scale_percent = 30 # percent of original size
+                    width = int(img.shape[1] * scale_percent / 100)
+                    height = int(img.shape[0] * scale_percent / 100)
+                    dim = (width, height)
+                    
+                    # resize image
+                    resized = cv.resize(img, dim, interpolation = cv.INTER_AREA)
+                    cv.imwrite("images/visitor_temp_f.jpg",resized)
+
+                    self.camera_labes.setStyleSheet("background-image : url(images/visitor_temp_f.jpg); border : 2px solid blue")
+                    self.camera_labes.setText("")
                     cap.release()
                     cv.destroyAllWindows()
                     return True
@@ -370,7 +435,8 @@ class CameraF:
         return "Camera F"
 
 class CameraG:
-    def __init__(self):
+    def __init__(self,camera_label):
+        self.camera_labes = camera_label
         self.face_classifier = cv.CascadeClassifier('data/haarcascade_frontalface_default.xml')
         print("Kamera G Aktifleştiriliyor.!")
         
@@ -409,6 +475,18 @@ class CameraG:
                 results = face_recognition.compare_faces([visitor_encoding], unknown_encoding)
 
                 if(results[0]==True):
+                    img = cv.imread('images/temp.jpg', cv.IMREAD_UNCHANGED)
+                    scale_percent = 30 # percent of original size
+                    width = int(img.shape[1] * scale_percent / 100)
+                    height = int(img.shape[0] * scale_percent / 100)
+                    dim = (width, height)
+                    
+                    # resize image
+                    resized = cv.resize(img, dim, interpolation = cv.INTER_AREA)
+                    cv.imwrite("images/visitor_temp_g.jpg",resized)
+
+                    self.camera_labes.setStyleSheet("background-image : url(images/visitor_temp_g.jpg); border : 2px solid blue")
+                    self.camera_labes.setText("")
                     cap.release()
                     cv.destroyAllWindows()
                     return True
@@ -424,7 +502,8 @@ class CameraG:
         return "Camera G"
 
 class CameraH:
-    def __init__(self):
+    def __init__(self,camera_label):
+        self.camera_labes = camera_label
         self.face_classifier = cv.CascadeClassifier('data/haarcascade_frontalface_default.xml')
         print("Kamera H Aktifleştiriliyor.!")
         
@@ -463,6 +542,18 @@ class CameraH:
                 results = face_recognition.compare_faces([visitor_encoding], unknown_encoding)
 
                 if(results[0]==True):
+                    img = cv.imread('images/temp.jpg', cv.IMREAD_UNCHANGED)
+                    scale_percent = 30 # percent of original size
+                    width = int(img.shape[1] * scale_percent / 100)
+                    height = int(img.shape[0] * scale_percent / 100)
+                    dim = (width, height)
+                    
+                    # resize image
+                    resized = cv.resize(img, dim, interpolation = cv.INTER_AREA)
+                    cv.imwrite("images/visitor_temp_h.jpg",resized)
+
+                    self.camera_labes.setStyleSheet("background-image : url(images/visitor_temp_h.jpg); border : 2px solid blue")
+                    self.camera_labes.setText("")
                     cap.release()
                     cv.destroyAllWindows()
                     return True

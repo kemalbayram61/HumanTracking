@@ -15,17 +15,7 @@ class Design(QMainWindow):
       self.ui.btn_raporlar.clicked.connect(self.buttonClick)
       self.ui.btn_ziyaretci.clicked.connect(self.buttonClick)
       self.ui.btn_exit.clicked.connect(self.buttonClick)
-      #nesnelerin tanımlanması
-      init = Init.Init()
-      self.main_camera = Cameras.CameraA(self.ui.kameralar_kamera)
-      self.human_walk = HumanWalk.HumanWalk()
 
-
-      #nesne değerlerinin atanması
-      self.target = init.Road1(self.ui.kameralar_kamera_3,self.ui.kameralar_kamera_6,self.ui.kameralar_kamera_7)
-      print(str(len(self.target.GetCameras()))+" Adet kameradan geçmesi bekleniliyor.")
-
-    
    def buttonClick(self):
       # GET BUTTON CLICKED
       btn = self.sender()
@@ -42,7 +32,6 @@ class Design(QMainWindow):
        # SHOW HOME PAGE
       if btnName == "btn_ziyaretci":         
          self.ui.stackedWidget.setCurrentWidget(self.ui.ziyaretci_sayfasi)
-         self.main_camera.ReadFace()
 
       # SHOW self.ui PAGE
       if btnName == "btn_izlenme":

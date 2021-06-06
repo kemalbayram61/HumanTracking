@@ -1,7 +1,18 @@
 class User:
-    user_id = ""
-    def __init__(self,user_id):
-        self.user_id = user_id
+    user_id        = ""
+    user_name      = ""
+    user_password  = ""
+    user_authority = ""
+    user_cameras   = ""
+    def __init__(self):
+        pass
+
+    def Setuser(self, json_user):
+        self.user_id        = json_user["_id"]
+        self.user_name      = json_user["name"]
+        self.user_password  = json_user["password"]
+        self.user_authority = json_user["authority"]
+        self.user_cameras   = json_user["cameras"]
 
 
 class Visitor:
