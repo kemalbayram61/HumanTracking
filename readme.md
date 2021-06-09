@@ -5,3 +5,4 @@ Gerekli Kütüphaneler:
 -dlib
 -imutils
 -pyqt
+-
